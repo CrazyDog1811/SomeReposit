@@ -1,0 +1,11 @@
+ .item {
+        color: yellow;
+        
+ }
+ .item img {
+   border-radius: 50%;
+   vertical-align: middle;
+ }
+ .item span {
+   display: block;
+ }
