@@ -1,5 +1,15 @@
-
+form {
+  width: 80%;
+}
+h3 {
+  padding-left: 20px;
+}
     .textArea {
-      width: 80%;
+      width: 100%;
+      margin-left: 5px;
+    }
+    .button {
+      display: block;
+      margin: 0 auto;
     }
     

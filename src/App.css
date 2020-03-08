@@ -12,3 +12,7 @@
 ul {
   list-style: none;
 }
+.app-wrapper-content {
+  grid-area: m;
+  background-color: tomato;
+  }

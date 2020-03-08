@@ -5,7 +5,9 @@
  .item img {
    border-radius: 50%;
    vertical-align: middle;
+   margin: 0 20px 0 20px;
  }
  .item span {
    display: block;
+   padding: 0 0 20px 10px;
  }
