@@ -1,0 +1,15 @@
+.friends h3 {
+    color: red;
+    text-align: center;
+}
+.unit {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.friend {
+width: 80px;
+height: 80px;
+border-radius: 50%;
+background-color: salmon;
+}

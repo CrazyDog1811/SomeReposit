@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './Sidebar.module.css';
 import { NavLink } from 'react-router-dom';
+import Friends from './Friends/Friends';
 
 const Sidebar = () => {
     return   <nav className={classes.nav}>
@@ -11,6 +12,7 @@ const Sidebar = () => {
       <li className={classes.item}><NavLink to="/music" activeClassName={classes.active}>Music</NavLink></li>
       <li className={classes.item}><NavLink to="/settings" activeClassName={classes.active}>Settings</NavLink></li>
     </ul>
+    <Friends />
   </nav>
 }
 

@@ -21,10 +21,20 @@ let State = {
             { id: 1, message: "Hi,I wonna meet you" },
             { id: 2, message: "Hwo are you" },
             { id: 3, message: "My older brather stood a programmer" },
-            { id: 4, message: "nothing understood" },
+            { id: 4, message: "nothing understand" },
             { id: 5, message: "yo, men. Give me five" }
         ]
-    }
+    },
+    sidebar: {},
+};
+export let addPost = (postMessage) => {
+    debugger;
+    let newPost = {
+        id: 6,
+        post: postMessage,
+        likesCount: 0
+    };
+    State.profilePage.postsData.push(newPost);
 };
 
 export default State;
