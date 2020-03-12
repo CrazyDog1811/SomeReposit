@@ -1,17 +1,20 @@
 import React from 'react';
 import classes from './DialogForm.module.css';
 
-let DialogForm = (props) => {
-    let newPostElement = React.createRef();
-    let addPost = () => {
-        let text = newPostElement.current.value;
-        alert(text);
-    }
+const DialogForm = (props) => {
+    let newMessageElement = React.createRef();
+    let addMessage = () => {      
+        props.addMessage();
+    };
+    let onMessageChange = () => {
+        let text = newMessageElement.current.value;
+        props.updateNewMessageText(text);
+    };
         return (
-                <form action="">
-                <textarea ref={newPostElement} rows="3" placeholder="enter Your post"></textarea>
-                <button onClick={addPost}>Add post</button>
-                </form>
+                <div className={classes.form}>
+                <textarea onChange={onMessageChange} ref={newMessageElement} placeholder="enter Your post" value={props.newMessageText}></textarea>
+                <button onClick={addMessage}>Add post</button>
+                </div>
     )
 };
 
