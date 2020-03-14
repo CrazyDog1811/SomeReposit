@@ -1,3 +1,7 @@
+import profileReducer from "./profile-reducer";
+import dialogsReducer from "./dialogs-reducer";
+import sidebarReducer from "./sidebar-reducer";
+
 let store = {
     _State: {
         profilePage: {
@@ -40,30 +44,11 @@ let store = {
         this._callSubscriber = observer;
     },
     dispatch(action) {
-        if (action.type === 'ADD-POST') {
-            let newPost = {
-                id: 6,
-                post: this._State.profilePage.newPostText,
-                likesCount: 0
-            };
-            this._State.profilePage.postsData.push(newPost);
-            this._State.profilePage.newPostText = "";
-            this._callSubscriber(this._State);
-        } if (action.type === 'UPDATE-NEW-POST-TEXT') {
-            this._State.profilePage.newPostText = action.newText;
-            this._callSubscriber(this._State);
-        } if (action.type === 'ADD-MESSAGE') {
-            let newMessage = {
-                id: 6,
-                message: this._State.dialogsPage.newMessageText
-            };
-            this._State.dialogsPage.messagesData.push(newMessage);
-            this._State.dialogsPage.newMessageText = "";
-            this._callSubscriber(this._State);
-        } if (action.type === 'UPDATE-NEW-MESSAGE-TEXT') {
-            this._State.dialogsPage.newMessageText = action.newText;
-            this._callSubscriber(this._State);
-        }
+        this._State.profilePage = profileReducer(this._State.profilePage, action);
+        this._State.dialogsPage = dialogsReducer(this._State.dialogsPage, action);
+        this._State.sidebar = sidebarReducer(this._State.sidebar, action);
+
+        this._callSubscriber(this._State);
     }
 };
 

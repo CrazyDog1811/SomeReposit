@@ -1,14 +1,15 @@
 import React from 'react';
 import classes from './DialogForm.module.css';
+import { addMessageActionCreator, updateNewMessageTextActionCreator } from '../../../State/dialogs-reducer';
 
 const DialogForm = (props) => {
     let newMessageElement = React.createRef();
     let addMessage = () => {      
-        props.dispatch({type: 'ADD-MESSAGE'});
+        props.dispatch(addMessageActionCreator());
     };
     let onMessageChange = () => {
         let text = newMessageElement.current.value;
-        let action = {type: 'UPDATE-NEW-MESSAGE-TEXT', newText: text};
+        let action = updateNewMessageTextActionCreator(text);
         props.dispatch(action);
     };
         return (
