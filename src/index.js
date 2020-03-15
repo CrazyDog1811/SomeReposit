@@ -6,9 +6,12 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import './index.css';
+import {Provider} from './StoreContext';
 
  let rerenderEntireTree = (State) => {
-ReactDOM.render(<BrowserRouter><App State={State} dispatch={store.dispatch.bind(store)} store={store}/></BrowserRouter>, document.getElementById('root'));
+ReactDOM.render( <BrowserRouter><Provider store={store}>
+    <App />
+    </Provider></BrowserRouter>, document.getElementById('root'));
 };
 
 rerenderEntireTree(store.getState());

@@ -2,5 +2,15 @@
  display: grid;
  grid-template-columns: 2fr 10fr;
 }
-
+.form {
+    width: 50%;
+}
+textarea {
+    margin-top: 10px ;
+    width: 100%;
+}
+button {
+    display: block;
+    margin: 5px auto;
+}
 
