@@ -33,7 +33,7 @@ let store = {
             ],
             newMessageText: "Write your message here"
         },
-        sidebar: {},
+        sidebarPage: {},
     },
     _callSubscriber() {
     },

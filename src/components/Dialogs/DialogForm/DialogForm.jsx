@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './DialogForm.module.css';
-import { addMessageActionCreator, updateNewMessageTextActionCreator } from '../../../State/dialogs-reducer';
+import { addMessageActionCreator, updateNewMessageTextActionCreator } from '../../../redux/dialogs-reducer';
 
 const DialogForm = (props) => {
     let newMessageElement = React.createRef();

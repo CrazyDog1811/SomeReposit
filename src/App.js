@@ -18,8 +18,7 @@ const App = (props) => {
         <Header />
         <Sidebar />
         <div className="app-wrapper-content">
-          <Route path='/profile' render={ () => <Profile profilePage={props.State.profilePage}
-           dispatch={props.dispatch} />} />
+          <Route path='/profile' render={ () => <Profile store={props.store} />} />
           <Route path='/dialogs' render={ () => <Dialogs state={props.State.dialogsPage} 
           dispatch={props.dispatch} />} />
           <Route path='/news' render={ () => <News />} />
