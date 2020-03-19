@@ -1,0 +1,30 @@
+.users {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+   }
+   .description {
+width: 50%;
+background-color: silver;
+border: 2px solid black;
+border-radius: 10px;
+padding: 5px 10px;
+margin-top: 5px;
+   }
+   .left {
+     float: left;  
+   }
+   .right {
+    float: right;  
+  }
+  button {
+      margin: 0 auto;
+      border-radius: 5px;
+  }
+  button:hover {
+    cursor: pointer;
+    background-color: greenyellow;
+  }
+  img {
+      display: block;
+      margin: 5px auto 0;
+  }
