@@ -1,3 +1,6 @@
 .avatar {
     padding-left: 20px;
 }
+.avatar img {
+    margin-left: 0;
+}

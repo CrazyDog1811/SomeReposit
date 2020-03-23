@@ -8,7 +8,7 @@ let store = {
             postsData: [
 
                 { id: 1, post: "Hi, how are you?", likesCount: "12" },
-                { id: 2, post: "Wow, hwo's there? ", likesCount: "22" },
+                { id: 2, post: "Wow, who's there? ", likesCount: "22" },
                 { id: 3, post: "Yo, man", likesCount: "123" },
                 { id: 4, post: "What's a f....", likesCount: "152" },
                 { id: 5, post: "????", likesCount: "2" }
