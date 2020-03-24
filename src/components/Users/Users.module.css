@@ -1,4 +1,17 @@
 
+.selected {
+  font-weight: bold;
+}
+.pageNumber {
+  display: flex;
+  flex-wrap: wrap;
+}
+.pageNumber > span {
+padding-left: 5px;
+}
+.pageNumber span:hover {
+  cursor: pointer;
+}
 .users {
     display: grid;
     grid-template-columns: 2fr 10fr;
@@ -29,3 +42,4 @@ margin-top: 5px;
       display: block;
       margin: 5px auto 0;
   }
+  
