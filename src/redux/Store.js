@@ -11,7 +11,7 @@ let store = {
                 { id: 2, post: "Wow, who's there? ", likesCount: "22" },
                 { id: 3, post: "Yo, man", likesCount: "123" },
                 { id: 4, post: "What's a f....", likesCount: "152" },
-                { id: 5, post: "????", likesCount: "2" }
+                { id: 5, post: "?", likesCount: "2" }
             ],
             newPostText: "Yo-Ho-Ho"
         },
