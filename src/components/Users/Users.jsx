@@ -3,6 +3,7 @@ import classes from './Users.module.css';
 import userPhoto from '../../assets/images/userInc.jpeg';
 import { NavLink } from 'react-router-dom';
 import * as axios from 'axios';
+import { usersAPI } from '../../api/api';
 //import { followAPI } from '../../api/api';
 
 let Users = (props) => {
@@ -23,39 +24,10 @@ let Users = (props) => {
                     </NavLink>
                     {u.followed ?
                         <button disabled={props.followingInProgress.some(id => id === u.id)} onClick={() => {
-                            props.toggleFollowingProgress(true, u.id);
-                            axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {
-                                withCredentials: true,
-                                headers: {
-                                    "API-KEY": "bfec528d-df0b-4f80-9e1e-afa4fb5f8eed"
-                                },
-                              })
-                              .then(response => {
-                                  if(response.data.resultCode == 0) {
-                                      props.unfollow(u.id)
-                                  }
-                                  props.toggleFollowingProgress(false, u.id);
-                              })
+                            props.unfollow(u.id)
                         }}>UNFOLLOW</button> 
                         : <button disabled={props.followingInProgress.some(id => id === u.id)} onClick={() => { 
-                            props.toggleFollowingProgress(true, u.id);
-                             axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {}, {
-                               withCredentials: true,
-                               headers: {
-                                 "API-KEY": "bfec528d-df0b-4f80-9e1e-afa4fb5f8eed"
-                             },
-                             })
-                             .then(response => {
-                                 if(response.data.resultCode == 0) {
-                                     props.follow(u.id)
-                                 }
-                                 props.toggleFollowingProgress(false, u.id);
-                             })  
-                            // followAPI.followUser().then(data => {
-                            //     if(data.resultCode == 0) {
-                            //         props.follow(u.id)
-                            //     }
-                            // })                   
+                            props.follow(u.id)                 
                             }}>FOLLOW</button>}
                 </div>
                 <div className={classes.description}>
