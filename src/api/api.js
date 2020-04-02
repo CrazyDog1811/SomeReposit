@@ -16,3 +16,12 @@ export const usersAPI = {
       });
 }
 }
+
+// export const followAPI = {
+//     followUser() {
+//         return instance.post(`follow/${u.id}`)
+//         .then(response => {
+//             return response.data;
+//         })
+//     }
+// };
