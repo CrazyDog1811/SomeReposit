@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './ProfileInfo.module.css';
 import Preloader from '../../common/preloader/preloader';
-
+import ProfileStatus from './ProfileStatus'
 
 const ProfileInfo = (props) => {
     if(!props.profile) {
@@ -12,7 +12,7 @@ const ProfileInfo = (props) => {
         <div className={classes.avatar}>
             <img src={props.profile.photos.large} alt="I am black" width="80" height="80"></img>
             {props.profile.fullName}
-            { props.profile.contacts.facebook, props.profile.lookingForAJob }
+            <ProfileStatus status={'fuck you Spilberg'}/>
         </div>
     </div>
 }
