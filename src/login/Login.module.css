@@ -1,0 +1,4 @@
+form input:not(:last-of-type) {
+    display: block;
+    margin: 0 0 10px 10px;
+}
